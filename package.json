@@ -1,0 +1,50 @@
+{
+  "name": "@trysac/feature-flags-files",
+  "version": "0.0.0",
+  "description": "Feature flags from a JSON file with typed variants, segment rules and sticky FNV-1a percentage rollouts, evaluated locally with OpenFeature-style reasons",
+  "license": "MIT",
+  "author": "Miguel Gomez",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trysac/u048-feature-flags-files.git"
+  },
+  "homepage": "https://github.com/Trysac/u048-feature-flags-files#readme",
+  "bugs": {
+    "url": "https://github.com/Trysac/u048-feature-flags-files/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "biome ci .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "check": "node scripts/check.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.0.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
