@@ -1,6 +1,6 @@
 # @trysac/feature-flags-files
 
-> Feature flags from a JSON file with typed variants, segment rules and sticky FNV-1a percentage rollouts, evaluated locally with OpenFeature-style reasons TypeScript library for Node.js 20+, published as ES modules with type declarations. MIT.
+> Feature flags from a versioned JSON file with typed variants, segment rules and sticky FNV-1a percentage rollouts, evaluated locally with OpenFeature-style reasons. TypeScript library for Node.js 20+, published as ES modules with type declarations. MIT.
 
 ## Docs
 
@@ -8,6 +8,7 @@
 - [AGENTS.md](AGENTS.md): commands, folder map, conventions and limits for contributors and agents
 - [Architecture](docs/ARCHITECTURE.md): modules and boundaries
 - [Testing](docs/TESTING.md): how tests and coverage work
+- [Security](docs/SECURITY.md): threat model and secret handling
 - [Decisions](docs/decisions/0001-record-architecture-decisions.md): architecture decision records
 
 ## Optional
