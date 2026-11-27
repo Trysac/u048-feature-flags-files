@@ -1,7 +1,6 @@
 # feature-flags-files
 
-[![npm version](https://img.shields.io/npm/v/@trysac/feature-flags-files.svg)](https://www.npmjs.com/package/@trysac/feature-flags-files)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/feature-flags-files.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u048-feature-flags-files/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u048-feature-flags-files/actions/workflows/ci.yml)
 
 Feature flags from a versioned JSON file with typed variants, segment rules and sticky FNV-1a percentage rollouts, evaluated locally with OpenFeature-style reasons.
@@ -12,9 +11,15 @@ Small teams want feature flags without a SaaS account or a running flag server, 
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/feature-flags-files
+git clone https://github.com/Trysac/u048-feature-flags-files.git
+cd u048-feature-flags-files && npm ci && npm run build
+cd ../your-project && npm install ../u048-feature-flags-files
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/feature-flags-files"`.
 
 The package ships ES modules with TypeScript declarations. The README examples assume Node.js 20 or newer.
 
